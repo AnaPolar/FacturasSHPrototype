@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/login.css" />
+    <script src="../JS/login&mainMenu.js"></script>
+    <script src="../users.js"></script>
+</head>
+<body onload="data()">
+<div class="login">
+    <img id="image" src="../img/logoI.png">
+    <div class="custom-form">
+        <h1>Iniciar sesión</h1>
+        <input id="user"
+                type="email"
+                name="email"
+                placeholder="Correo empresarial"
+                required="required"
+        >
+        <input id="pass"
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                required="required"
+        >
+        <button onclick="login()">Iniciar sesión</button>
+    </div>
+</div>
+</body>
+</html>

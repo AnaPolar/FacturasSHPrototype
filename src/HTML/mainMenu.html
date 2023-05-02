@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/mainMenu.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="../JS/login&mainMenu.js"></script>
+</head>
+<body onload="interfaceConfig()">
+
+<div id="top-menu">
+    <img src="../img/logo.png">
+    <button id="nav" onclick="navigation()"></button>
+</div>
+
+<div id="content">
+    <div id="sideMenu">
+        <div id="name">Usuario</div>
+
+        <a onclick="uploadBillsUI()">Subir factura</a><br>
+        <a onclick="blankBillsUI()">Banco de facturas en blanco</a><br>
+        <a onclick="checkedBillsUI()">Banco de facturas revisadas</a><br><br>
+
+        <div id="admin">
+            <div id="adminTxt">Funciones administrativas</div>
+            <a onclick="workersUI()">Empleados</a><br>
+            <a onclick="statesUI()">Catálogo de países</a><br>
+        </div>
+
+        <button id="logout" onclick="location.href='login.html'"><img src="../img/switch.png">Cerrar sesión</button>
+    </div>
+
+    <div id="label">
+        Banco de Facturas en blanco
+    </div>
+
+    <div id="blankBills">
+        <div id="search">
+            Buscar
+            <input type="text">
+            <button></button>
+        </div>
+
+        <div id="table">
+
+        </div>
+
+        <div id="buttons">
+            <button id="check" onclick="checkBillUI()">Revisar</button>
+            <button id="add" onclick="uploadBillsUI()">Agregar</button>
+        </div>
+    </div>
+
+    <div id="uploadBill">
+        <!--<button><img src="../img/atras.png"></button><br>-->
+        <span>Referencia <input type="text"></span><br>
+        <!--<span>Trabajador <select>
+            <option>Seleccione su nombre</option>
+            <option>Worker 1</option>
+            <option>Worker 2</option>
+            <option>Worker 3</option>
+            <option>Worker 4</option>
+            <option>Worker 5</option>
+        </select></span><br>-->
+        <span>Cliente <select>
+            <option>Seleccione el cliente de la factura</option>
+            <option>Client 1</option>
+            <option>Client 2</option>
+            <option>Client 3</option>
+            <option>Client 4</option>
+            <option>Client 5</option>
+        </select></span>
+        <span id="upBill">Subir factura <input type="file"></span><br>
+        <span>Operación <select>
+            <option>Seleccione la operación</option>
+            <option>Importación</option>
+            <option>Exportación</option>
+        </select></span><br>
+        <span>Clave del documento <input type="text"></span><br>
+        <span>Fecha salida del país <input type="date"></span><br>
+        <span>Dirección de origen <select>
+            <option>Seleccione origen</option>
+        </select></span><br>
+        <span>Dirección de destino <select>
+            <option>Seleccione destino</option>
+        </select></span><br>
+        <span>Comentarios <input type="text"></span><br>
+
+        <button id="saveUpload">Guardar</button>
+
+    </div>
+
+    <div id="checkedBills">
+        <div id="search1">
+            Buscar
+            <input type="text">
+            <button></button>
+        </div>
+
+        <div id="table1">
+
+        </div>
+
+        <div id="buttons1">
+            <button id="check1" onclick="checkBillUI()">Revisar</button>
+            <button id="add1" onclick="uploadBillsUI()">Agregar</button>
+        </div>
+    </div>
+
+    <div id="checkingBills">
+        <!--<button><img src="../img/atras.png"></button><br>-->
+        <span>Referencia <input type="text"></span><br>
+        <!--<span>Trabajador <select>
+            <option>Seleccione su nombre</option>
+            <option>Worker 1</option>
+            <option>Worker 2</option>
+            <option>Worker 3</option>
+            <option>Worker 4</option>
+            <option>Worker 5</option>
+        </select></span><br>-->
+        <span>Cliente <select>
+            <option>Seleccione el cliente de la factura</option>
+            <option>Client 1</option>
+            <option>Client 2</option>
+            <option>Client 3</option>
+            <option>Client 4</option>
+            <option>Client 5</option>
+        </select></span><br>
+        <!--<span id="upBill1">Subir factura corregida<input type="file"></span><br>-->
+        <span>Operación <select>
+            <option>Seleccione la operación</option>
+            <option>Importación</option>
+            <option>Exportación</option>
+        </select></span><br>
+        <span>Clave del documento <input type="text"></span><br>
+        <span>Fecha salida del país <input type="date"></span><br>
+        <span>Dirección de origen <select>
+            <option>Seleccione origen</option>
+        </select></span><br>
+        <span>Dirección de destino <select>
+            <option>Seleccione destino</option>
+        </select></span><br>
+        <span>Comentarios <input type="text"></span><br>
+        <button id="bill"><img src="../img/archivo.png">Ver factura original</button>
+
+        <button id="saveUpload1">Guardar</button>
+
+        <div id="part2">
+            <span>Número de revisión actual <input type="number"></span><br>
+            <span>Fecha de última revisión <input type="date"></span><br>
+            <span>Fecha de ingreso <input type="date"></span><br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <span id="upBill1">Subir factura corregida<input type="file"></span><br>
+        </div>
+    </div>
+
+    <div id="workers">
+        <span id="searchW">
+            Buscar
+            <input type="text">
+            <button></button>
+        </span>
+        <span id="statusW">
+             Estado
+            <select>
+                <option>Estado...</option>
+                <option>Activo</option>
+                <option>Inactivo</option>
+            </select>
+        </span>
+
+        <div id="tableW">
+
+        </div>
+
+        <div id="buttonsW">
+            <button id="delete">Borrar</button>
+            <button id="addW" onclick="addW()">Agregar</button>
+        </div>
+
+        <div id="addNew">
+            <p>Nombre <input type="text"></p>
+            <p>Apellidos <input type="text"></p>
+            <p>Puesto <select>
+                <option>Seleccione el puesto</option>
+            </select></p>
+            <p>Departamento <select>
+                <option>Seleccione el departamento</option>
+            </select></p>
+            <button id="cancel" onclick="addW()">Cancelar</button>
+            <button id="accept">Aceptar</button>
+        </div>
+
+    </div>
+
+    <div id="states">
+        <div id="searchS">
+            Buscar
+            <input type="text">
+            <button></button>
+        </div>
+
+        <div id="tableS">
+
+        </div>
+
+        <button id="addS" onclick="addS()">Agregar</button>
+
+
+        <div id="addNewS">
+            <p>Nombre <input type="text"></p>
+            <button id="cancelS" onclick="addS()">Cancelar</button>
+            <button id="acceptS">Aceptar</button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
