@@ -251,6 +251,13 @@ div img{
     font-size: 16px;
     border-radius: 5px 5px 5px 5px;
 }
+
+#billType{
+    position: absolute;
+    right: 220px;
+    bottom: 30px;
+}
+
 #bill{
     background-color: transparent;
     color: black;

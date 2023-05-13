@@ -26,7 +26,7 @@ function user(){
 }
 function interfaceConfig() {
     $('#sideMenu').hidden;
-    $('#name').text(user().username);
+    $('#name').text(user().position);
 
     blankBillsUI();
 };

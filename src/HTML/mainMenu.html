@@ -72,8 +72,8 @@
             <option>Client 3</option>
             <option>Client 4</option>
             <option>Client 5</option>
-        </select></span>
-        <span id="upBill">Subir factura <input type="file"></span><br>
+        </select></span><br>
+        <!--<span id="upBill">Subir factura <input type="file"></span><br>-->
         <span>Operación <select>
             <option>Seleccione la operación</option>
             <option>Importación</option>
@@ -81,10 +81,10 @@
         </select></span><br>
         <span>Clave del documento <input type="text"></span><br>
         <span>Fecha salida del país <input type="date"></span><br>
-        <span>Dirección de origen <select>
+        <span>País de origen <select>
             <option>Seleccione origen</option>
         </select></span><br>
-        <span>Dirección de destino <select>
+        <span>País de destino <select>
             <option>Seleccione destino</option>
         </select></span><br>
         <span>Comentarios <input type="text"></span><br>
@@ -137,14 +137,20 @@
         </select></span><br>
         <span>Clave del documento <input type="text"></span><br>
         <span>Fecha salida del país <input type="date"></span><br>
-        <span>Dirección de origen <select>
+        <span>País de origen <select>
             <option>Seleccione origen</option>
         </select></span><br>
-        <span>Dirección de destino <select>
+        <span>País de destino <select>
             <option>Seleccione destino</option>
         </select></span><br>
         <span>Comentarios <input type="text"></span><br>
-        <button id="bill"><img src="../img/archivo.png">Ver factura original</button>
+        <!--<button id="bill"><img src="../img/archivo.png">Ver factura original</button>-->
+
+        <select id="billType">
+            <option>Seleccionar opción de factura</option>
+            <option>Lista para pagar</option>
+            <option>Revisar</option>
+        </select>
 
         <button id="saveUpload1">Guardar</button>
 
@@ -152,11 +158,11 @@
             <span>Número de revisión actual <input type="number"></span><br>
             <span>Fecha de última revisión <input type="date"></span><br>
             <span>Fecha de ingreso <input type="date"></span><br>
+            <!--<br>
             <br>
             <br>
             <br>
-            <br>
-            <span id="upBill1">Subir factura corregida<input type="file"></span><br>
+            <span id="upBill1">Subir factura corregida<input type="file"></span><br>-->
         </div>
     </div>
 
